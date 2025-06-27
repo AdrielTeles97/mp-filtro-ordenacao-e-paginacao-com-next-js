@@ -12,7 +12,6 @@ export default function SearchInput() {
     const params = new URLSearchParams(searchParams);
 
     const handleSearchInput = useDebouncedCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        
         const searchStringParams = e.target.value;
 
         if (searchStringParams) {
@@ -23,7 +22,6 @@ export default function SearchInput() {
 
         replace(`${pathname}?${params.toString()}`);
     }, 500);
-
 
     return (
         <div className="relative">
